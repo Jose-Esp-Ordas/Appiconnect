@@ -1,3 +1,7 @@
+using Appiconnect.Shared;
+using Appiconnect.Web.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Appiconnect.Web
 {
     public class Program
@@ -8,7 +12,8 @@ namespace Appiconnect.Web
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
+            builder.Services.AddDbContext<DataContext>(x=>x.UseSqlServer(
+                "Name=con"));
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
