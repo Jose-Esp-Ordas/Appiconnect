@@ -17,7 +17,7 @@ namespace Appiconnect.Web
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<DataContext>(x=>x.UseSqlServer(
                 "Name=con"));
-            builder.Services.AddScoped<IUserHelper, UserHelper>();
+            builder.Services.AddScoped<IUserHelper, userHelper>();
             builder.Services.AddTransient<Seeder>();
             builder.Services.AddIdentity<User, IdentityRole>(x =>
             {

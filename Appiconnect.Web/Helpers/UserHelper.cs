@@ -6,14 +6,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Appiconnect.Web.Helpers
 {
-    public class UserHelper : IUserHelper
+    public class userHelper : IUserHelper
     {
         private readonly DataContext dataContext;
         private readonly UserManager<User> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
         private readonly SignInManager<User> signInManager;
 
-        public UserHelper(
+        public userHelper(
             DataContext dataContext,
             UserManager<User> userManager,
             RoleManager<IdentityRole> roleManager,
